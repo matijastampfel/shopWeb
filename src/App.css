@@ -1,0 +1,456 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+body {
+  background-image: url("http://www.powerpointhintergrund.com/uploads/sea-background-0.jpg");
+}
+
+.container{
+  width: 800px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-container{
+  width: 100%;
+  height: 6%;
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.menu-tab{
+  color: yellow;
+  width: 25%;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+  border: none;
+  border-left: 3px solid black;
+  transition: 0.3s ease;
+  font-family: 'Abel', sans-serif;
+  font-size: 90%;
+  font-weight: 500;
+  outline: none;
+}
+
+.menu-tab:hover{
+  
+  color: black;
+
+  cursor: pointer;
+
+}
+
+.form-container{
+  margin-top: 15%;
+  
+}
+
+.setNewProduct{
+
+  width: 45%;
+  height: 14%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: auto;
+  font-family: 'Abel', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: black;
+  transition: 0.3s ease;
+}
+
+
+
+.setPriceInput, .setAmountInput, .setNameInput, .setImageInput{
+
+  display: block;
+  height: 14%;
+  width: 100%;
+  margin:auto;
+  font-size: 2em;
+  font-family: 'Abel', sans-serif;
+  border: none;
+  
+  outline: none;
+  transition: 0.3s ease;
+
+}
+
+.setPriceInput:focus, .setAmountInput:focus, .setNameInput:focus, .setPriceInput:active, .setAmountInput:active, .setNameInput:active, .setImageInput:focus, .setImageInput:active {
+
+  border-bottom: 2px solid yellow;
+
+}
+
+.products-container{
+  position: relative;
+
+  width: 90%;
+  height: 80%;
+
+
+ 
+  margin:auto;
+  margin-top: 3%;
+float: left;
+  clear: both;
+}
+
+.display-products-div{
+position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-x:hidden;
+  overflow-y: auto;
+
+  width: 100%;
+  height: 80%;
+  top: 10%;
+
+}
+
+.product-div{
+  display: block;
+  margin: 0% 7% 6% 6%;
+  width: 20%;
+  height: 30%;
+  
+  font-family: 'Abel', sans-serif;
+}
+
+.product-name-div, .product-image-div{
+  width: 100%;
+  align-content: center;
+  text-align: center;
+}
+
+.product-name-div{
+  font-weight: 700;
+  font-size: 120%;
+  text-align: center;
+  margin-top: 2%;
+
+}
+
+.product-price-div{
+  width: 30%;
+
+}
+
+.not-available{
+
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Abel', sans-serif;
+  font-weight: 900;
+  color: red;
+  margin-left: 5%;
+
+}
+
+.product-image{
+
+  height: 85%;
+  width: 100%;
+  margin: -5% 0 0 5%;
+}
+
+.product-input{
+  display: block;
+  width: 100%;
+  font-family: 'serif', sans-serif;
+  border: none;
+  border-bottom: 1px solid yellow;
+  outline: none;
+}
+
+.product-input:active, .product-input:focus{
+  border-bottom: 1px solid yellow;
+}
+
+.product-input-price{
+
+width: 70%;
+  margin-top: 15%;
+}
+
+.product-input-store{
+
+  width: 40%;
+  margin-top: 15%;
+}
+
+.price-and-store{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
+  position: relative;
+  margin-top: 2%;
+  font-size: 80%;
+
+
+}
+
+.product-store-div{
+  position: absolute;
+  right: -20%;
+  top: 0;
+  width: 65%;
+    height: 20%;
+}
+
+.product-price-div{
+  position: absolute;
+  left: 5%;
+  width: 30%;
+}
+
+.edit-div{
+
+  position: absolute;
+  top:0%;
+  right: 10%;
+  height: 10%;
+  width: 10%;
+  margin-bottom: 30%;
+
+}
+
+.cancel-and-submit{
+
+    display: flex;
+    flex-direction: row;
+}
+
+.submit-change-button, .edit-button, .cancel-edit-button{
+
+display: inline-block;
+  height: 45%;
+  width: 95%;
+  margin:auto;
+  background:none;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Abel', sans-serif;
+  outline: none;
+  transition: 0.9s ease;
+  border: none;
+}
+
+.edit-button, .submit-change-button{
+
+  color: yellow;
+}
+
+.edit-button:hover, .submit-change-button:hover{
+
+
+  border-bottom: 1px solid black;
+}
+
+.cancel-edit-button{
+  color: red;
+
+}
+
+.cancel-edit-button:hover{
+
+  border-bottom: 1px solid red;
+
+}
+
+
+
+.add-to-cart{
+  font-family: 'Abel', sans-serif;
+  background:none;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+  cursor: pointer;
+  color: black;
+  width: 100%;
+  z-index: 100;
+}
+
+.delete-product{
+  font-family: 'Abel', sans-serif;
+  background:none;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+  cursor: pointer;
+  color: red;
+  width: 100%;
+  z-index: 100;
+  margin-top:35%;
+}
+
+.delete-product:hover{
+  border-bottom: 1px solid red;
+  color: red;
+
+}
+.add-to-cart:hover{
+  color: green;
+border-bottom: 1px solid green;
+}
+
+.cart-container{
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 90%;
+  overflow-x:hidden;
+  overflow-y:auto;
+  
+  margin:auto;
+  font-family: 'Abel', sans-serif;
+
+}
+
+.cart-product{
+  position: relative;
+  height: 10%;
+  width: 70%;
+  margin:auto;
+  margin-left: 1%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4%;
+
+
+}
+
+.cart-amount-span{
+  font-weight: bold;
+
+}
+
+.cart-name-and-price{
+  display: flex;
+    width: 20%;
+  flex-direction: column;
+  margin-right: 6%;
+  margin-left: 4%;
+  margin-top: 2%;
+
+}
+
+.cart-name{
+  font-weight: bold;
+
+}
+.cart-image{
+
+  max-height: 100%;
+  max-width: 30%;
+
+
+}
+
+.cart-total{
+
+position: absolute;
+right: 14%;
+  bottom: 5%;
+  font-size: 140%;
+  font-weight: 700;
+
+}
+
+.amount-div{
+    margin: auto;
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+    flex-direction: row;
+  right: 0;
+
+
+}
+
+.cart-amount-span{
+    display: block;
+    margin: auto;
+}
+
+.increase-decrease-div{
+
+    display: flex;
+    flex-direction: column;
+margin: auto;
+}
+.plus, .minus, .remove-from-cart{
+
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-family: 'Abel', sans-serif;
+  font-weight: bolder;
+  transition: 0.3s ease;
+  outline: none;
+}
+
+.plus:hover, .minus:hover, .remove-from-cart:hover{
+
+  border-bottom: 1px solid yellow;
+}
+
+.plus{
+
+    color: green;
+}
+
+.minus{
+    color: red;
+
+}
+
+.plus-disabled, .minus-disabled{
+
+    color: red;
+
+}
+
+.plus-disabled:hover, .minus-disabled:hover{
+
+    color: red;
+    border-bottom: none;
+
+}
+.sign-in-to-edit{
+
+  border: none;
+  background: none;
+  font-family: 'Abel', sans-serif;
+  color: green;
+  font-weight: 700;
+
+
+}
+
+.history-container{
+
+  font-family: 'Abel', sans-serif;
+  color: black;
+  font-weight: 900;
+  width: 80%;
+  margin: auto;
+  height: 85%;
+  overflow: auto;
+}
